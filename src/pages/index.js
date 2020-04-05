@@ -32,8 +32,9 @@ const BlogIndex = ({ data, location }) => {
             </header>
             <section>
               <p
+                style={{color: 'red'}}
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                  __html: node.frontmatter.something.find(it => it.startsWith('Hello World')),
                 }}
               />
             </section>
@@ -64,6 +65,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            something
           }
         }
       }
