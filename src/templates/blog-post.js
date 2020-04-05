@@ -37,7 +37,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <h2 style={{color: 'red'}}>{post.frontmatter.something.find(it => it.startsWith('Hello World'))}</h2>
+        <h2 style={{color: 'red'}}>{post.frontmatter.something}</h2>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

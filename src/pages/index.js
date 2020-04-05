@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
               <p
                 style={{color: 'red'}}
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.something.find(it => it.startsWith('Hello World')),
+                  __html: node.frontmatter.something,
                 }}
               />
             </section>
